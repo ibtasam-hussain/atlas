@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -8,10 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Left */}
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <div className="h-6 w-6 rounded bg-gradient-to-br from-red-500 via-yellow-400 to-blue-500" />
-              <span className="text-sm font-semibold">Kaleidoscope</span>
-            </div>
+<div className="mb-4 flex items-center">
+  <img
+    src={Logo}
+    alt="Atlas Logo"
+    className="h-24 w-24 object-contain"
+  />
+  <span className="text-3xl font-semibold">Atlas</span>
+</div>
+
 
             <p className="max-w-xs text-sm text-white/60">
               Atlas Creative Co. is a California-based creative marketing agency

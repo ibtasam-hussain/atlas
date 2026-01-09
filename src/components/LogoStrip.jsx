@@ -1,13 +1,18 @@
 import React from "react";
 import logo1 from "../assets/logo1.png";
+import logo2 from "../assets/logo2.png";
+import logo3 from "../assets/logo3.png";
+import logo4 from "../assets/logo4.png";
+import logo5 from "../assets/logo5.png";
+import logo6 from "../assets/logo6.png";
 
 const logos = [
   { name: "Paladora", src: logo1 },
-  { name: "WeiboTV", src: logo1 },
-  { name: "Homme", src: logo1 },
-  { name: "HuranTV", src: logo1 },
-  { name: "Matsuri", src: logo1 },
-  { name: "Radical", src: logo1 },
+  { name: "WeiboTV", src: logo2 },
+  { name: "Homme", src: logo3 },
+  { name: "HuranTV", src: logo4 },
+  { name: "Matsuri", src: logo5 },
+  { name: "Radical", src: logo6 },
 ];
 
 export default function LogoStrip() {

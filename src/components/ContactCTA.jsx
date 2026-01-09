@@ -1,6 +1,6 @@
 import React from "react";
 import bg from "../assets/background.png";
-
+import { ArrowUpRight } from "lucide-react";
 export default function ContactCTA() {
   return (
     <section className="w-full bg-black">
@@ -26,10 +26,10 @@ export default function ContactCTA() {
             people vital to their success.
           </p>
 
-          <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90">
-            Contact Us
-            <span className="text-lg">↗</span>
-          </button>
+<button className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-white/90 hover:gap-3">
+  Contact Us
+  <ArrowUpRight size={16} />
+</button>
         </div>
       </div>
     </section>

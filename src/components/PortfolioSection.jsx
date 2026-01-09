@@ -1,4 +1,8 @@
 import React from "react";
+import port from "../assets/port.png";
+import port2 from "../assets/port2.png";
+import { ArrowUpRight } from "lucide-react";
+
 
 export default function PortfolioSection() {
   return (
@@ -20,7 +24,7 @@ export default function PortfolioSection() {
           {/* Button */}
           <button className="flex items-center gap-2 self-start rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-105 md:self-center">
             View All Works
-            <span className="text-lg">↗</span>
+            <ArrowUpRight size={16} />
           </button>
         </div>
 
@@ -29,7 +33,7 @@ export default function PortfolioSection() {
           {/* Card 1 */}
           <div className="group relative overflow-hidden rounded-2xl bg-neutral-900">
             <img
-              src="/portfolio-1.png"
+              src={port}
               alt="Pickle Pantry"
               className="h-[360px] w-full object-cover transition group-hover:scale-105"
             />
@@ -37,24 +41,13 @@ export default function PortfolioSection() {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Play Button */}
-            <div className="absolute bottom-6 left-6 flex items-center gap-3 rounded-full bg-black/70 px-4 py-2 backdrop-blur">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
-                ▶
-              </div>
-              <div>
-                <p className="text-xs font-medium text-white">
-                  Logistics Promo
-                </p>
-                <p className="text-[11px] text-white/60">Case Study</p>
-              </div>
-            </div>
+
           </div>
 
           {/* Card 2 */}
           <div className="group relative overflow-hidden rounded-2xl bg-neutral-900">
             <img
-              src="/portfolio-2.png"
+              src={port2}
               alt="Dekaf Branding"
               className="h-[360px] w-full object-cover transition group-hover:scale-105"
             />
@@ -62,18 +55,7 @@ export default function PortfolioSection() {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Play Button */}
-            <div className="absolute bottom-6 left-6 flex items-center gap-3 rounded-full bg-black/70 px-4 py-2 backdrop-blur">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
-                ▶
-              </div>
-              <div>
-                <p className="text-xs font-medium text-white">
-                  Branding Campaign
-                </p>
-                <p className="text-[11px] text-white/60">Case Study</p>
-              </div>
-            </div>
+      
           </div>
         </div>
       </div>
