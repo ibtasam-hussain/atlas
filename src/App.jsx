@@ -1,27 +1,21 @@
-import ContactCTA from "./components/ContactCTA";
-import FeaturesSection from "./components/FeaturesSection";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import LogoStrip from "./components/LogoStrip";
-import Marquee from "./components/Marquee";
-import Navbar from "./components/Navbar";
-import PortfolioSection from "./components/PortfolioSection";
-import ServicesSection from "./components/ServicesSection";
-import StatsSection from "./components/StatsSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+// import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+import AboutUS from "./pages/Aboutus";
+import Services from "./pages/Services";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black">
-      <Navbar />
-      <HeroSection />
-      <LogoStrip />
-<FeaturesSection />
-<StatsSection />
-<ServicesSection />
-<PortfolioSection />
-<Marquee />
-<ContactCTA />
-<Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUS />} />
+       <Route path="/services" element={<Services />} />
+        {/*  <Route path="/portfolio" element={<Portfolio />} />*/}
+        <Route path="/contact" element={<Contact />} /> 
+      </Routes>
+    </Router>
   );
 }

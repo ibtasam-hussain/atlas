@@ -1,11 +1,12 @@
 import { useMemo, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Portfolios", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolios", href: "/portfolio" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -14,33 +15,39 @@ export default function Navbar() {
   const links = useMemo(
     () =>
       navItems.map((item) => (
-        <a
+        <NavLink
           key={item.label}
-          href={item.href}
-          className="text-[14px] font-medium text-white/70 transition-colors hover:text-white"
+          to={item.href}
+          className={({ isActive }) =>
+            `text-[14px] font-medium transition-colors ${
+              isActive
+                ? "text-white"
+                : "text-white/70 hover:text-white"
+            }`
+          }
         >
           {item.label}
-        </a>
+        </NavLink>
       )),
     []
   );
 
   return (
-    <header className="w-full bg-black py-4 shadow-md shadow-black/20 fixed top-0 z-50">
+    <header className="fixed top-0 z-50 w-full bg-black py-4 shadow-md shadow-black/20">
       <div className="mx-auto flex h-[56px] max-w-6xl items-center px-8">
         {/* LEFT: Nav links */}
         <nav className="hidden items-center gap-10 md:flex">
           {links}
         </nav>
 
-        {/* RIGHT: Button + Mobile */}
+        {/* RIGHT */}
         <div className="ml-auto flex items-center gap-3">
-          <a
-            href="#"
+          <Link
+            to="/contact"
             className="hidden rounded-full bg-white px-6 py-[10px] text-[13px] font-semibold text-black transition hover:bg-white/90 md:inline-flex"
           >
             Book A Demo
-          </a>
+          </Link>
 
           {/* Mobile menu */}
           <button
@@ -60,22 +67,23 @@ export default function Navbar() {
           <div className="mx-auto max-w-6xl px-6 py-4">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setOpen(false)}
                   className="text-sm font-medium text-white/80 hover:text-white"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#"
+
+              <Link
+                to="/contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex w-fit rounded-full bg-white px-6 py-3 text-sm font-semibold text-black"
               >
                 Book A Demo
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
