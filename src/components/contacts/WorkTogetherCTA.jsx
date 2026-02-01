@@ -42,9 +42,7 @@ export default function WorkTogetherCTA() {
                     <p className="mt-3 text-sm leading-6 text-white/80">
                       Address:
                       <br />
-                      4533 McArthur Blvd Street, A-2053, Newport Beach,
-                      <br />
-                     CA, 92660, United States
+Śląska 80C80-389 Gdańsk, Poland
                     </p>
                   </div>
 

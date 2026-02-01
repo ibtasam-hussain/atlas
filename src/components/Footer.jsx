@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import { navItems } from "./navItems";
 
 export default function Footer() {
   return (
@@ -36,17 +38,17 @@ export default function Footer() {
           {/* Middle links */}
           <div>
             <ul className="space-y-4 text-sm">
-              {["Home", "About Us", "Portfolios", "Services", "Contact Us"].map(
-                (item) => (
-                  <li
-                    key={item}
-                    className="flex items-center justify-between border-b border-white/10 pb-2 text-white/70 hover:text-white"
-                  >
-                    {item}
-                    <span className="text-xs">↗</span>
-                  </li>
-                )
-              )}
+              {navItems.map((item) => (
+                <li
+                  key={item.label}
+                  className="flex items-center justify-between border-b border-white/10 pb-2 text-white/70 hover:text-white"
+                >
+                  <Link to={item.href} className="text-white/70 hover:text-white">
+                    {item.label}
+                  </Link>
+                  <span className="text-xs">↗</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -73,7 +75,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
-          <p>© Copyright 2023 Kaleidoscope. All Rights Reserved</p>
+          <p>© Copyright 2026 Atlas. All Rights Reserved</p>
 
           <div className="flex gap-6">
             <span className="cursor-pointer hover:text-white">

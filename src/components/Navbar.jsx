@@ -1,13 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolios", href: "/portfolio" },
-  { label: "Contact Us", href: "/contact" },
-];
+import { navItems } from "./navItems";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
